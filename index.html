@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>TODO APP</title>
+  </head>
+  <body>
+    <div class="todo">
+      <h1 class="todo__title">What's your plan?</h1>
+      <div class="todo__form">
+        <div>
+          <input type="text" class="todo-input" placeholder="Add Task" />
+          <span class="todo__error-message hidden">
+            Please input a value!
+            <i class="fas fa-warning"></i
+          ></span>
+        </div>
+        <button class="todo-btn btn-add">Add</button>
+      </div>
+      <ul class="todo__list"></ul>
+      <button class="todo__btn-delete-all todo-btn hidden">Delete All</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="overlay hidden"></div>
+    <div class="modal hidden">
+      <h1>Update</h1>
+      <input type="text" class="modal__input" />
+      <button class="todo-btn modal__update-btn">Update</button>
+    </div>
+    <div class="modal__delete-all hidden">
+      <p>Are you sure you want to delete all?</p>
+      <div>
+        <button class="todo-btn modal__close-btn">Cancel</button>
+        <button class="todo-btn modal__delete-all-btn">Confirm</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

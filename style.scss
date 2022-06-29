@@ -1,0 +1,253 @@
+:root {
+  --pink-color: #f06292;
+  --white-color: #e1eaf2;
+  --light-gray: #9ea7b4;
+  --dark-gray: #3c424a;
+  --darker-gray: #2e333a;
+  --hover-button-color: #2e333a65;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--pink-color);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// GENERIC STYLES
+input,
+button {
+  font-family: Poppins, sans-serif;
+
+  &:focus-visible {
+    outline: 1px solid var(--white-color);
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.todo-btn {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--white-color);
+  transition: background-color 400ms ease-in-out;
+  background-color: var(--darker-gray);
+
+  &:hover {
+    background-color: var(--hover-button-color);
+  }
+}
+
+// TODO CONTENT
+.todo {
+  background-color: var(--dark-gray);
+  color: var(--white-color);
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 40rem;
+  box-shadow: 0px 2px 15px 3px #0000005e;
+  position: absolute;
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+  }
+
+  &__form {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+      width: 100%;
+    }
+  }
+
+  &__form input,
+  &__form button {
+    background-color: var(--darker-gray);
+    border: none;
+    padding: 0.6rem 0.8rem;
+    height: 3.2rem;
+  }
+
+  &__form input {
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 1.6rem;
+    color: var(--white-color);
+  }
+
+  ::placeholder {
+    opacity: 0.8;
+    font-family: Montserrat, sans-serif;
+  }
+
+  &__form button {
+    margin-left: 1rem;
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  &__error-message {
+    color: #ee3737;
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+    display: block;
+  }
+
+  &__error-message.hide {
+    display: none;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 0 3rem 0;
+    list-style-type: none;
+  }
+
+  &__list-item {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    transition: all 0.4s ease;
+
+    &:not(:last-child) {
+      margin-bottom: 2.2rem;
+    }
+
+    p {
+      font-size: 1.7rem;
+    }
+
+    div {
+      display: inline-flex;
+      margin-left: 3rem;
+    }
+  }
+
+  &__btn-edit,
+  &__btn-delete {
+    border: none;
+    background-color: transparent;
+    color: var(--light-gray);
+    font-size: 1.2em;
+
+    i {
+      pointer-events: none;
+    }
+  }
+
+  &__btn-delete {
+    margin-left: 1.2rem;
+  }
+
+  &__btn-delete-all {
+    padding: 0.6rem 1rem;
+    background-color: var(--darker-gray);
+    border: none;
+    color: var(--white-color);
+  }
+}
+
+// MODAL CONTENT
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(37, 37, 37, 0.425);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  background-color: var(--dark-gray);
+  border: 2px solid var(--light-gray);
+  padding: 2rem;
+  border-radius: 5px;
+  position: absolute;
+  color: var(--white-color);
+  display: inline-flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-bottom: 1px solid var(--white-color);
+    background-color: transparent;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    outline: none;
+  }
+
+  button {
+    padding: 0.6rem 0.8rem;
+    align-self: flex-end;
+  }
+}
+
+.modal__delete-all {
+  z-index: 2;
+  background-color: var(--dark-gray);
+  padding: 2rem;
+  border-radius: 5px;
+
+  p {
+    color: var(--white-color);
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: end;
+  }
+
+  button {
+    padding: 0.4rem 0.6rem;
+    align-self: flex-end;
+  }
+
+  button:last-child {
+    margin-left: 1.2rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
