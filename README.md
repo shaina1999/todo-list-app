@@ -26,8 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Todo List app](https://shainadeguzman.github.io/todo-list-app/)
 
 ## My process
 
@@ -46,6 +45,6 @@ After developing this project, i learned how to convert an array into a string a
 
 ## Author
 
-- Website - [Shaina De Guzman](deguzman.netlify.app)
+- Website - [Shaina De Guzman](https://deguzman.netlify.app/)
 
 Thanks for checking out this project.
