@@ -45,6 +45,6 @@ After developing this project, i learned how to convert an array into a string a
 
 ## Author
 
-- Website - [Shaina De Guzman](https://deguzman.netlify.app/)
+- Website - [Shaina De Guzman](https://shainadeguzman.netlify.app/)
 
 Thanks for checking out this project.
