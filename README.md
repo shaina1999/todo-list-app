@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Todo List app](https://shainadeguzman.github.io/todo-list-app/)
+- Live Site URL: [Todo List app](https://shaina1999.github.io/todo-list-app/)
 
 ## My process
 
